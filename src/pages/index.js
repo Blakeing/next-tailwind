@@ -1,5 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
+import Head from 'next/head'
 
 export default function Home() {
   return (
@@ -11,5 +10,5 @@ export default function Home() {
       </Head>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
-  );
+  )
 }
