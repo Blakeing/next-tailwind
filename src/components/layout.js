@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Footer from './footer'
+import Header from './header'
 
 export default function Layout({ children }) {
   return (
@@ -6,7 +8,11 @@ export default function Layout({ children }) {
       <Head>
         <title>Layouts Example</title>
       </Head>
-      <main>{children}</main>
+      <Header />
+      <main className="grid-container h-full flex flex-col justify-center">
+        {children}
+      </main>
+      <Footer />
     </>
   )
 }
