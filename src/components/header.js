@@ -6,7 +6,7 @@ const navigation = [
   { name: 'Company', href: '#' },
 ]
 
-export default function Header() {
+export default function Example() {
   return (
     <header className="bg-indigo-600">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">

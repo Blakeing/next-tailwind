@@ -9,9 +9,7 @@ export default function Layout({ children }) {
         <title>Layouts Example</title>
       </Head>
       <Header />
-      <main className="grid-container h-full flex flex-col justify-center">
-        {children}
-      </main>
+      <main className="grid-container h-full">{children}</main>
       <Footer />
     </>
   )

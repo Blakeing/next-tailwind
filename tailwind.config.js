@@ -1,3 +1,5 @@
+// const colors = require('tailwindcss/colors')
+
 function withOpacityValue(variable) {
   return ({ opacityValue }) => {
     if (opacityValue === undefined) {
@@ -10,11 +12,20 @@ function withOpacityValue(variable) {
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    colors: {
-      primary: withOpacityValue('--color-primary'),
-      secondary: withOpacityValue('--color-secondary'),
+    // colors: {
+    //   primary: withOpacityValue('--color-primary'),
+    //   secondary: withOpacityValue('--color-secondary'),
+    //   indigo: colors.indigo,
+    //   gray: colors.gray,
+    // },
+    extend: {
+      colors: {
+        primary: withOpacityValue('--color-primary'),
+        secondary: withOpacityValue('--color-secondary'),
+        // indigo: colors.indigo,
+        // gray: colors.gray,
+      },
     },
-    extend: {},
   },
   plugins: [],
 }
