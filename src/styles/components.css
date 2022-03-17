@@ -1,3 +1,7 @@
 .fit {
   min-height: calc(100vh - 210px);
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: stretch;
+  min-height: calc(var(--vh) * 100 - 210px);
 }
