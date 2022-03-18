@@ -7,10 +7,6 @@ export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page)
 
   useEffect(() => {
-    document.body.classList?.remove('loading')
-  }, [])
-
-  useEffect(() => {
     function calculateVh() {
       var vh = window.innerHeight * 0.01
       document.documentElement.style.setProperty('--vh', vh + 'px')
@@ -24,6 +20,8 @@ export default function MyApp({ Component, pageProps }) {
 
     // Re-calculate on device orientation change
     window.addEventListener('orientationchange', calculateVh)
+
+    document.body.classList?.remove('loading')
   }, [])
 
   return getLayout(<Component {...pageProps} />)

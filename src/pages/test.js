@@ -1,4 +1,4 @@
-import Slider from 'src/components/slider'
+import Slider from '../components/slider'
 import Layout from '../components/layout'
 
 export default function Test() {
