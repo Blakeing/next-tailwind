@@ -1,4 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
+
+import Link from 'next/link'
+
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -21,13 +24,11 @@ export default function Example() {
             </a>
             <div className="hidden ml-10 space-x-8 lg:block">
               {navigation.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-base font-medium text-white hover:text-indigo-50"
-                >
-                  {link.name}
-                </a>
+                <Link key={link.name} href={link.href}>
+                  <a className="text-base font-medium text-white hover:text-indigo-50">
+                    {link.name}
+                  </a>
+                </Link>
               ))}
             </div>
           </div>
