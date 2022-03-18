@@ -1,11 +1,16 @@
 - design systme setup
+  - Grid templates
+- headless ui
 - clean up layout tree issue
 - testing
 - eventually typescript
 - turbo repo?
 - tailwind plugins
 - ci/cd
-- react bricks
+- react bricks/sanity?
 - prisma
 - tailwind ui
 - add tprc
+- slider
+- add responsive fit for desktop
+- typography
