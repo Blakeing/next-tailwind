@@ -3,5 +3,5 @@
   min-height: -moz-available;
   min-height: -webkit-fill-available;
   min-height: fill-available;
-  min-height: calc(var(--vh) * 100 - 210px);
+  min-height: calc(var(--vh) * 100 - 323px);
 }
