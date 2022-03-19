@@ -1,5 +1,5 @@
-import Slider from '../components/slider'
-import Layout from '../components/layout'
+import Slider from '../components/Slider'
+import Layout from '../components/Layout'
 import { useEffect } from 'react'
 import useWindowDimensions from '../lib/hooks/useWIndowDimensions'
 

@@ -1,6 +1,9 @@
 import '../styles/main.css'
 import '../styles/chrome-bug.css'
 import { useEffect } from 'react'
+import 'keen-slider/keen-slider.min.css'
+import Head from '../components/Head'
+
 // import useWindowDimensions from 'src/components/useWIndowDimensions'
 
 export default function MyApp({ Component, pageProps }) {
@@ -35,5 +38,10 @@ export default function MyApp({ Component, pageProps }) {
     document.body.classList?.remove('loading')
   }, [])
 
-  return getLayout(<Component {...pageProps} />)
+  return getLayout(
+    <>
+      <Head />
+      <Component {...pageProps} />
+    </>
+  )
 }

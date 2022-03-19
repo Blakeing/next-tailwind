@@ -1,5 +1,5 @@
-import Layout from '../components/layout'
-import Sidebar from '../components/sidebar'
+import Layout from '../components/Layout'
+import Sidebar from '../components/Sidebar'
 
 export default function About() {
   return (
