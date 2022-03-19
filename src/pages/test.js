@@ -1,7 +1,7 @@
 import Slider from '../components/slider'
 import Layout from '../components/layout'
 import { useEffect } from 'react'
-import useWindowDimensions from 'src/components/useWIndowDimensions'
+import useWindowDimensions from '../lib/hooks/useWIndowDimensions'
 
 export default function Test() {
   const { height } = useWindowDimensions()

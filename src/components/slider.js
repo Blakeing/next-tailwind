@@ -1,27 +1,127 @@
+import { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
+import Image from 'next/image'
+import profilePic from '../../public/pexels-bruno-pires-10164553.jpg'
 
 export default function Slider() {
-  const [sliderRef] = useKeenSlider({
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
     created() {
-      document.addEventListener('mousemove', () => console.log('move'), {
-        capture: true,
-      })
+      setLoaded(true)
     },
   })
 
   return (
-    <div
-      ref={sliderRef}
-      style={{ position: 'absolute' }}
-      className="keen-slider inset-0 "
+    <>
+      <div
+        ref={sliderRef}
+        style={{ position: 'absolute' }}
+        className="keen-slider inset-0 "
+      >
+        <div className="keen-slider__slide number-slide1">
+          <Image
+            src={profilePic}
+            alt="Picture of the author"
+            placeholder="blur" // Optional blur-up while loading
+          />
+        </div>
+        <div className="keen-slider__slide number-slide2">
+          <Image
+            src={profilePic}
+            alt="Picture of the author"
+            placeholder="blur" // Optional blur-up while loading
+          />
+        </div>
+        <div className="keen-slider__slide number-slide3">
+          <Image
+            src={profilePic}
+            alt="Picture of the author"
+            placeholder="blur" // Optional blur-up while loading
+          />
+        </div>
+        <div className="keen-slider__slide number-slide4">
+          <Image
+            src={profilePic}
+            alt="Picture of the author"
+            placeholder="blur" // Optional blur-up while loading
+          />
+        </div>
+        <div className="keen-slider__slide number-slide5">
+          <Image
+            src={profilePic}
+            alt="Picture of the author"
+            placeholder="blur" // Optional blur-up while loading
+          />
+        </div>
+        <div className="keen-slider__slide number-slide6">
+          <Image
+            src={profilePic}
+            alt="Picture of the author"
+            placeholder="blur" // Optional blur-up while loading
+          />
+        </div>
+      </div>
+      {loaded && instanceRef.current && (
+        <>
+          <Arrow
+            left
+            onClick={(e) => e.stopPropagation() || instanceRef.current?.prev()}
+            disabled={currentSlide === 0}
+          />
+
+          <Arrow
+            onClick={(e) => e.stopPropagation() || instanceRef.current?.next()}
+            disabled={
+              currentSlide ===
+              instanceRef.current.track.details.slides.length - 1
+            }
+          />
+        </>
+      )}
+      {loaded && instanceRef.current && (
+        <div className="dots">
+          {[
+            ...Array(instanceRef.current.track.details.slides.length).keys(),
+          ].map((idx) => {
+            return (
+              <button
+                key={idx}
+                onClick={() => {
+                  instanceRef.current?.moveToIdx(idx)
+                }}
+                className={'dot' + (currentSlide === idx ? ' active' : '')}
+              ></button>
+            )
+          })}
+        </div>
+      )}
+    </>
+  )
+}
+
+function Arrow(props) {
+  const disabeld = props.disabled ? ' arrow--disabled' : ''
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? 'arrow--left' : 'arrow--right'
+      } ${disabeld}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
     >
-      <div className="keen-slider__slide number-slide1">1</div>
-      <div className="keen-slider__slide number-slide2">2</div>
-      <div className="keen-slider__slide number-slide3">3</div>
-      <div className="keen-slider__slide number-slide4">4</div>
-      <div className="keen-slider__slide number-slide5">5</div>
-      <div className="keen-slider__slide number-slide6">6</div>
-    </div>
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
   )
 }
