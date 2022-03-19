@@ -3,7 +3,7 @@ import Sidebar from '../components/Sidebar'
 
 export default function Index() {
   return (
-    <div className="relative bg-white">
+    <div className="relative ">
       <div className="lg:absolute lg:inset-0">
         <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
           <img
@@ -83,10 +83,5 @@ export default function Index() {
 }
 
 Index.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <Sidebar />
-      {page}
-    </Layout>
-  )
+  return <Layout>{page}</Layout>
 }
