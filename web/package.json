@@ -10,9 +10,13 @@
     "prettier-fix": "prettier --write ."
   },
   "dependencies": {
+    "@portabletext/react": "^1.0.4",
+    "@sanity/image-url": "^1.0.1",
+    "@sanity/webhook": "^1.0.2",
     "clsx": "^1.1.1",
     "keen-slider": "^6.6.4",
     "next": "12.1.0",
+    "next-sanity": "^0.5.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
