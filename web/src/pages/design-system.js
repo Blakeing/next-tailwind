@@ -3,7 +3,7 @@ import Sidebar from '../components/Sidebar'
 
 export default function DesignSystem() {
   return (
-    <div className="container flow">
+    <div className="flow container">
       <h1 className="uppercase">Design system</h1>
       <section className="flow" id="colors" style={{ margin: '4rem 0' }}>
         <h2 className="numbered-title">
@@ -12,7 +12,7 @@ export default function DesignSystem() {
         <div className="flex">
           <div className="flow" style={{ flexGrow: 1 }}>
             <div
-              className="bg-dark text-white ff-serif fs-500"
+              className="bg-dark ff-serif fs-500 text-white"
               style={{ padding: '3rem 1rem 1rem', border: '1px solid white' }}
             >
               #0B0D17
@@ -40,7 +40,7 @@ export default function DesignSystem() {
           </div>
           <div className="flow" style={{ flexGrow: 1 }}>
             <div
-              className="bg-white text-dark ff-serif fs-500"
+              className="text-dark ff-serif fs-500 bg-white"
               style={{ padding: '3rem 1rem 1rem', border: '1px solid white' }}
             >
               #FFFFFF
@@ -94,7 +94,7 @@ export default function DesignSystem() {
                 Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character
                 Space
               </p>
-              <p className="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
+              <p className="text-accent fs-500 ff-sans-cond letter-spacing-1 uppercase">
                 So, you want to travel to space
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function DesignSystem() {
                 Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character
                 Space
               </p>
-              <p className="fs-200 uppercase ff-sans-cond letter-spacing-3">
+              <p className="fs-200 ff-sans-cond letter-spacing-3 uppercase">
                 Avg. Distance
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function DesignSystem() {
               <p className="text-accent">
                 Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space
               </p>
-              <p className="fs-300 uppercase ff-sans-cond letter-spacing-2">
+              <p className="fs-300 ff-sans-cond letter-spacing-2 uppercase">
                 Europa
               </p>
             </div>
@@ -157,17 +157,17 @@ export default function DesignSystem() {
           <nav>
             <ul className="primary-navigation underline-indicators flex">
               <li className="active">
-                <a className="uppercase text-white letter-spacing-2" href="#">
+                <a className="letter-spacing-2 uppercase text-white" href="#">
                   <span>01</span>Active
                 </a>
               </li>
               <li>
-                <a className="uppercase text-white letter-spacing-2" href="#">
+                <a className="letter-spacing-2 uppercase text-white" href="#">
                   <span>02</span>Hovered
                 </a>
               </li>
               <li>
-                <a className="uppercase text-white letter-spacing-2" href="#">
+                <a className="letter-spacing-2 uppercase text-white" href="#">
                   <span>03</span>Idle
                 </a>
               </li>
@@ -179,7 +179,7 @@ export default function DesignSystem() {
             {/* explore button */}
             <a
               href="#"
-              className="large-button uppercase ff-serif fs-600 text-dark bg-white"
+              className="large-button ff-serif fs-600 text-dark bg-white uppercase"
             >
               Explore
             </a>
@@ -192,19 +192,19 @@ export default function DesignSystem() {
             <div className="tab-list underline-indicators flex">
               <button
                 aria-selected="true"
-                className="uppercase ff-sans-cond text-accent letter-spacing-2"
+                className="ff-sans-cond text-accent letter-spacing-2 uppercase"
               >
                 Moon
               </button>
               <button
                 aria-selected="false"
-                className="uppercase ff-sans-cond text-accent letter-spacing-2"
+                className="ff-sans-cond text-accent letter-spacing-2 uppercase"
               >
                 Mars
               </button>
               <button
                 aria-selected="false"
-                className="uppercase ff-sans-cond text-accent letter-spacing-2"
+                className="ff-sans-cond text-accent letter-spacing-2 uppercase"
               >
                 Europa
               </button>

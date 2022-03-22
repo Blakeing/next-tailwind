@@ -4,8 +4,8 @@ export default function Alert({ preview }) {
   return (
     <div
       className={cn('border-b', {
-        'bg-accent-7 border-accent-7 text-white': preview,
-        'bg-accent-1 border-accent-2': !preview,
+        'border-accent-7 bg-accent-7 text-white': preview,
+        'border-accent-2 bg-accent-1': !preview,
       })}
     >
       <div>
@@ -15,7 +15,7 @@ export default function Alert({ preview }) {
               This page is a preview.{' '}
               <a
                 href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
+                className="underline transition-colors duration-200 hover:text-cyan"
               >
                 Click here
               </a>{' '}
@@ -26,7 +26,7 @@ export default function Alert({ preview }) {
               The source code for this blog is{' '}
               <a
                 href="#"
-                className="underline hover:text-success duration-200 transition-colors"
+                className="hover:text-success underline transition-colors duration-200"
               >
                 available on GitHub
               </a>

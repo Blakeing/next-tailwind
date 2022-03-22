@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
-import 'keen-slider/keen-slider.min.css'
+
 import Image from 'next/image'
 import profilePic from '../../public/pexels-bruno-pires-10164553.jpg'
 

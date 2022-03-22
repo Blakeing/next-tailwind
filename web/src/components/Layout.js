@@ -4,7 +4,7 @@ import Header from './Header'
 
 export default function Layout({ preview, children }) {
   return (
-    <div className="h-full bg-primary mx-auto transition-colors duration-150">
+    <div className="mx-auto h-full bg-primary transition-colors duration-150">
       <Header />
       <Alert preview={preview} />
       <main className="fit">{children}</main>

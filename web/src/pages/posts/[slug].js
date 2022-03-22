@@ -31,18 +31,18 @@ export default function Post({ data = {}, preview }) {
     <Layout preview={preview}>
       <div className="container mx-auto px-5">
         {router.isFallback ? (
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
+          <h1 className="mb-12 text-center text-6xl font-bold leading-tight tracking-tighter md:text-left md:text-7xl md:leading-none lg:text-8xl">
             Loading..
           </h1>
         ) : (
           <>
             <article>
               <>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
+                <h1 className="mb-12 text-center text-6xl font-bold leading-tight tracking-tighter md:text-left md:text-7xl md:leading-none lg:text-8xl">
                   {post.title}
                 </h1>
               </>
-              <div className="max-w-2xl mx-auto">
+              <div className="mx-auto max-w-2xl">
                 <PortableText value={post.content} />
               </div>
             </article>
