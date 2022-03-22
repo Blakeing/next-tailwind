@@ -1,4 +1,5 @@
 import cn from 'clsx'
+import Link from 'next/link'
 
 export default function Alert({ preview }) {
   return (
@@ -9,16 +10,15 @@ export default function Alert({ preview }) {
       })}
     >
       <div>
-        <div className="py-2 text-center text-sm">
+        <div className="py-2 text-sm text-center">
           {preview ? (
             <>
               This page is a preview.{' '}
-              <a
-                href="/api/exit-preview"
-                className="underline transition-colors duration-200 hover:text-cyan"
-              >
-                Click here
-              </a>{' '}
+              <Link href="/api/exit-preview">
+                <a className="underline transition-colors duration-200 hover:text-cyan">
+                  Click here
+                </a>
+              </Link>{' '}
               to exit preview mode.
             </>
           ) : (
@@ -26,7 +26,7 @@ export default function Alert({ preview }) {
               The source code for this blog is{' '}
               <a
                 href="#"
-                className="hover:text-success underline transition-colors duration-200"
+                className="underline transition-colors duration-200 hover:text-success"
               >
                 available on GitHub
               </a>
